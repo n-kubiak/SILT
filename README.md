@@ -4,7 +4,7 @@ Project repo for the paper [SILT: Self-supervised Lighting Transfer Using Implic
 ## The basics
 The SILT model is written in PyTorch and during the experiments PyTorch 1.8.1 was used with CUDA 11.1 (docker image: nvidia/cuda:11.1.1-cudnn8-runtime-ubuntu18.04). The model was trained on a single GeForce RTX 3090 GPU for approx. 180k iterations.
 
-The trained SILT models can be downloaded from here - Multi-Illumination and VIDIT.
+The trained SILT models can be downloaded from here - Multi-Illumination and VIDIT (coming soon - before 22/11)
 
 ## Testing
 To test the SILT model, create a ```checkpoints``` directory within SILT. Then, within ```checkpoints``` create a folder with the name of your experiment, e.g. ```checkpoints/EXP_NAME```. Place the downloaded checkpoint within your experiment folder and rename it to ```latest_net_G.pth```. 
@@ -22,7 +22,7 @@ To train the model, use the below command:
 ```
 python train.py --name 'EXP_NAME'
 ```
-You can also add new datasets as suggested in the Testing section. Please set your checkpointing directory (```--checkpoints_dir```) in ```tools/args.py```. If you wish to use tensorboard logging, use the ```--tb_log``` flag and set your logging directory using the ```--tb_dir``` argument.
+You can also add new datasets as suggested in the Testing section. Please set your checkpointing directory ```--checkpoints_dir``` in ```tools/args.py```. If you wish to use tensorboard logging, use the ```--tb_log``` flag and set your logging directory using the ```--tb_dir``` argument.
 
 ## Citation
 If you use or write about SILT, please use the below citation:
