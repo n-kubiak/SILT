@@ -2,9 +2,9 @@
 Project repo for the paper [SILT: Self-supervised Lighting Transfer Using Implicit Image Decomposition (BMVC 2021)](https://arxiv.org/abs/2110.12914)
 
 ## The basics
-The SILT model is written in PyTorch and during the experiments PyTorch 1.8.1 was used with CUDA 11.1 (docker image: nvidia/cuda:11.1.1-cudnn8-runtime-ubuntu18.04). The model was trained on a single GeForce RTX 3090 GPU for approx. 180k iterations.
+The SILT model is written in PyTorch and during the experiments PyTorch 1.8.1 was used with CUDA 11.1 (docker image: nvidia/cuda:11.1.1-cudnn8-runtime-ubuntu18.04). The model was trained on a single GeForce RTX 3090 GPU.
 
-The trained SILT models can be downloaded from here - Multi-Illumination and VIDIT (coming soon - before 22/11)
+We release the train and test code as well as the pretrained models. The SILT models trained on both datasets discussed in the paper can be downloaded from here - Multi-Illumination and VIDIT (coming soon - before 22/11)
 
 ## Testing
 To test the SILT model, create a ```checkpoints``` directory within SILT. Then, within ```checkpoints``` create a folder with the name of your experiment, e.g. ```checkpoints/EXP_NAME```. Place the downloaded checkpoint within your experiment folder and rename it to ```latest_net_G.pth```. 
