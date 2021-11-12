@@ -1,5 +1,5 @@
 # SILT: Self-supervised Lighting Transfer Using Implicit Image Decomposition (BMVC 2021)
-Project repo for the paper SILT: Self-supervised Lighting Transfer Using Implicit Image Decomposition (BMVC 2021)
+Project repo for the paper [SILT: Self-supervised Lighting Transfer Using Implicit Image Decomposition (BMVC 2021)](https://arxiv.org/abs/2110.12914)
 
 ## The basics
 The SILT model is written in PyTorch and during the experiments PyTorch 1.8.1 was used with CUDA 11.1 (docker image: nvidia/cuda:11.1.1-cudnn8-runtime-ubuntu18.04). The model was trained on a single GeForce RTX 3090 GPU for approx. 180k iterations.
