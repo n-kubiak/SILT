@@ -1,4 +1,4 @@
-# SILT: Self-supervised Lighting Transfer Using Implicit Image Decomposition (BMVC 2021)
+# SILT: Self-supervised Lighting Transfer Using Implicit Image Decomposition (BMVC 2021) - Kubiak _et al._
 Project repo for the paper [SILT: Self-supervised Lighting Transfer Using Implicit Image Decomposition (BMVC 2021)](https://arxiv.org/abs/2110.12914)
 
 ## The basics
