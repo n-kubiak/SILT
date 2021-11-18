@@ -1,4 +1,4 @@
-from kornia.losses import PSNRLoss, SSIM
+from kornia.losses import psnr, ssim_loss
 from kornia import spatial_gradient
 
 from torch import nn
@@ -105,8 +105,8 @@ class DecompModelInference(BaseModel):
         fake_image = out['output']
 
         loss_dict['G_perc'] = self.vgg_loss(fake_image.detach(), ref)
-        loss_dict['SSIM'] = 1 - 2 * SSIM(window_size=11, reduction='mean', max_val=1.0)(fake_image.detach(), ref).item()
-        loss_dict['PSNR'] = PSNRLoss(max_val=1.0)(fake_image.detach(), ref).item()
+        loss_dict['SSIM'] = 1 - 2*ssim_loss(fake_image.detach(), ref, window_size=11, reduction='mean', max_val=1.0).item()  # ssim_loss = DSSIM
+        loss_dict['PSNR'] = psnr(fake_image.detach(), ref, max_val=1.0).item()
         image_dict = {'fake': fake_image, 'r_map': out['r'], 's_map': out['s'], 'new_s_map': out['tgt_s']}
 
         return image_dict, loss_dict
