@@ -22,7 +22,7 @@ To train the model, use the below command:
 ```
 python train.py --name 'EXP_NAME'
 ```
-You can also add new datasets as suggested in the Testing section. Please set your checkpointing directory ```--checkpoints_dir``` in ```tools/args.py```. If you wish to use tensorboard logging, use the ```--tb_log``` flag and set your logging directory using the ```--tb_dir``` argument.
+You can also add new datasets as suggested in the Testing section. Please set your checkpointing directory ```--checkpoints_dir``` in ```tools/args.py```. To train in a self-supervised manner (with misaligned data), use the ```---misaligned``` flag.  If you wish to use tensorboard logging, use the ```--tb_log``` flag and set your logging directory using the ```--tb_dir``` argument.
 
 ## Citation
 If you use or write about SILT, please use the below citation:
